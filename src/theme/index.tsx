@@ -41,30 +41,51 @@ export function colors(darkMode: boolean): Colors {
     black,
 
     // text
-    text1: darkMode ? '#FFFFFF' : '#000000',
-    text2: darkMode ? '#C3C5CB' : '#565A69',
-    text3: darkMode ? '#6C7284' : '#888D9B',
-    text4: darkMode ? '#565A69' : '#C3C5CB',
-    text5: darkMode ? '#2C2F36' : '#EDEEF2',
+    // text1: darkMode ? '#FFFFFF' : '#000000',
+    // text2: darkMode ? '#FFFFFF' : '#565A69',
+    // text3: darkMode ? '#6C7284' : '#888D9B',
+    // text4: darkMode ? '#565A69' : '#C3C5CB',
+    // text5: darkMode ? '#2C2F36' : '#EDEEF2',
+
+    // SPECIALIST0X ADDS
+    text1: '#FFF',
+    text2: '#FFF',
+    text3: '#FFF',
+    text4: '#FFF',
+    text5: '#FFF',
 
     // backgrounds / greys
-    bg1: darkMode ? '#212429' : '#FFFFFF',
-    bg2: darkMode ? '#2C2F36' : '#F7F8FA',
-    bg3: darkMode ? '#40444F' : '#EDEEF2',
+    // bg1: darkMode ? '#172229' : '#FFFFFF',
+    // bg2: darkMode ? '#121B21' : '#F7F8FA',
+    // bg3: darkMode ? '#40444F' : '#EDEEF2',
     bg4: darkMode ? '#565A69' : '#CED0D9',
     bg5: darkMode ? '#6C7284' : '#888D9B',
+
+
+    // SPECIALIST0X ADDS
+    bg1: '#00050F', // desktop background
+    bg2: '#12141A', // swap container background
+    bg3: '#1C1F26', // swap token background
 
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: darkMode ? '#cc0058' : '#cc0058',
-    primary2: darkMode ? '#cc0058' : '#cc0058',
-    primary3: darkMode ? '#cc0058' : '#cc0058',
-    primary4: darkMode ? '#cc0058' : '#cc0058',
-    primary5: darkMode ? '#cc0058' : '#cc0058',
-    primary6: darkMode ? '#FFFFFF' : '#FFFFFF',
+    // primary1: darkMode ? '#cc0058' : '#cc0058',
+    // primary2: darkMode ? '#cc0058' : '#cc0058',
+    // primary3: darkMode ? '#cc0058' : '#cc0058',
+    // primary4: darkMode ? '#cc0058' : '#cc0058',
+    // primary5: darkMode ? '#cc0058' : '#cc0058',
+    // primary6: darkMode ? '#FFFFFF' : '#FFFFFF',
+    
+    // SPECIALIST0X MODS
+    primary1: '#32B4FF',
+    primary2: '#32B4FF',
+    primary3: '#32B4FF',
+    primary4: '#32B4FF',
+    primary5: '#32B4FF',
+    primary6: '#FFFFFF',
 
     // color text
     primaryText1: darkMode ? '#ffffff' : '#ffffff',
