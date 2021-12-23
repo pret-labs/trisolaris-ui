@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { AutoColumn } from '../Column'
-import { RowBetween } from '../Row'
+import { AutoRow, RowBetween } from '../Row'
 import { TYPE } from '../../theme'
 import { CardSection } from '../earn/styled'
 
@@ -17,8 +17,10 @@ const DataColumn = styled(RowBetween)`
  `
 
 export const StyledDataCard = styled(AutoColumn)`
-   border: 1px solid black
-   border-radius: 12px;
+   background-color: ${({ theme }) => theme.bg2}
+  border: 1px solid ${({ theme }) => theme.primary1};
+
+   border-radius: 10px;
    width: 100%;
    position: relative;
    overflow: hidden;
@@ -32,9 +34,9 @@ export default function StakeTriDataCard({
             <StyledDataCard>
                 <CardSection>
                     <AutoColumn gap="md">
-                        <RowBetween>
+                        <AutoRow justify='center'>
                             <TYPE.black fontWeight={600}>{label}</TYPE.black>
-                        </RowBetween>
+                        </AutoRow>
                         {children}
                     </AutoColumn>
                 </CardSection>

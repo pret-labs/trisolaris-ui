@@ -85,7 +85,8 @@ export function colors(darkMode: boolean): Colors {
     primary3: '#32B4FF',
     primary4: '#32B4FF',
     primary5: '#32B4FF',
-    primary6: '#FFFFFF',
+    primary6: '#0050FF',
+    // primary6: '#FFFFFF',
 
     // color text
     primaryText1: darkMode ? '#ffffff' : '#ffffff',
@@ -238,7 +239,7 @@ html {
 export const ThemedGlobalStyle = createGlobalStyle`
 html {
   color: ${({ theme }) => theme.text1};
-  background-color: ${({ theme }) => theme.bg2};
+  background-color: ${({ theme }) => theme.bg1};
 }
 
 body {
@@ -246,9 +247,9 @@ body {
   background-position: 0 -30vh;
   background-repeat: no-repeat;
   background-image: ${({ theme }) =>
-    `radial-gradient(50% 50% at 50% 50%, ${transparentize(0.85, theme.primary1)} 0%, ${transparentize(
+    `radial-gradient(50% 50% at 50% 50%, ${transparentize(0.85, theme.bg1)} 0%, ${transparentize(
       1,
-      theme.bg1
+      theme.primary1
     )} 100%)`};
 }
 `

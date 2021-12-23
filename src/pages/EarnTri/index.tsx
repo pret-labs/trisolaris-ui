@@ -5,7 +5,7 @@ import { TYPE, ExternalLink } from '../../theme'
 import PoolCard from '../../components/earn/PoolCardTri'
 import { RouteComponentProps } from 'react-router-dom'
 import { RowBetween } from '../../components/Row'
-import { CardSection, DataCard, CardNoise, CardBGImage } from '../../components/earn/styled'
+import { CardSection, DataCard, CardNoise, CardBGImage, GradientCard } from '../../components/earn/styled'
 import { useTranslation } from 'react-i18next'
 import { useFarms } from '../../state/stake/apr'
 
@@ -73,8 +73,7 @@ export default function Earn({
   return (
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
-        <DataCard>
-          <CardBGImage />
+        <GradientCard>
           <CardNoise />
           <CardSection>
             <AutoColumn gap="md">
@@ -93,9 +92,7 @@ export default function Earn({
               </ExternalLink>
             </AutoColumn>
           </CardSection>
-          <CardBGImage />
-          <CardNoise />
-        </DataCard>
+        </GradientCard>
       </TopSection>
 
       <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>

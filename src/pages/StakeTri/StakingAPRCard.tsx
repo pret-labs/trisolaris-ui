@@ -3,12 +3,12 @@ import styled from 'styled-components'
 import { AutoColumn } from '../../components/Column'
 import { RowBetween } from '../../components/Row'
 import { TYPE } from '../../theme'
-import { DataCard, CardBGImage, CardSection } from '../../components/earn/styled'
+import { GradientCard, CardBGImage, CardSection } from '../../components/earn/styled'
 import { useTriBarStats } from '../../state/stakeTri/hooks'
 import { useFetchTriBarAPR } from '../../fetchers/bar'
 
-const Card = styled(DataCard)`
-   background: radial-gradient(76.02% 75.41% at 1.84% 0%, #888D9B 0%, #33ffa7c2 100%);
+const Card = styled(GradientCard)`
+   background: linear-gradient(90deg, #0014FF 0%, #0050FF 16.66%, #32B4FF 33.33%, #5AFFFF 50%, #32B4FF 66.67%, #0050FF 83.33%, #0014FF 100%);
  `
 
 const MediumHeaderWhite = styled(TYPE.mediumHeader)`
@@ -56,7 +56,6 @@ export default function StakingAPRCard() {
                     </RowBetween>
                 </AutoColumn>
             </CardSection>
-            <CardBGImage />
         </Card>
     )
 }

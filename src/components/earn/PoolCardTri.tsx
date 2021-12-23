@@ -124,9 +124,6 @@ export default function PoolCard({ stakingInfo, version }: { stakingInfo: Stakin
 
   return (
     <Wrapper showBackground={isStaking} bgColor1={backgroundColor1} bgColor2={isDualRewards ? backgroundColor2 : null}>
-      <CardBGImage desaturate />
-      <CardNoise />
-
       <TopSection>
         <DoubleCurrencyLogo currency0={currency0} currency1={currency1} size={24} />
         <AutoRow align="baseline">

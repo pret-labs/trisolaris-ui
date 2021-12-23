@@ -11,7 +11,7 @@ import { tryParseAmount } from '../../state/swap/hooks'
 import { TYPE } from '../../theme'
 import { ClickableText } from '../Pool/styleds'
 import { useTokenBalance } from '../../state/wallet/hooks'
-import { DataCard, CardBGImage, CardNoise, CardSection } from '../../components/earn/styled'
+import { GradientCard, CardBGImage, CardNoise, CardSection } from '../../components/earn/styled'
 import StakeInputPanel from '../../components/StakeTri/StakeInputPanel'
 import CurrencyLogo from '../../components/CurrencyLogo'
 import { useTriBar, useTriBarStats } from '../../state/stakeTri/hooks'
@@ -185,9 +185,9 @@ export default function StakeTri() {
   return (
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
-        <DataCard>
-          <CardBGImage />
-          <CardNoise />
+        <GradientCard>
+          {/* <CardBGImage /> */}
+          {/* <CardNoise /> */}
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
@@ -213,9 +213,9 @@ export default function StakeTri() {
                   </ExternalLink> */}
             </AutoColumn>
           </CardSection>
-          <CardBGImage />
-          <CardNoise />
-        </DataCard>
+          {/* <CardBGImage /> */}
+          {/* <CardNoise /> */}
+        </GradientCard>
       </TopSection>
 
       <TopSection gap="md">
@@ -225,19 +225,19 @@ export default function StakeTri() {
       <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
         <DataRow style={{ alignItems: 'baseline', gap: '10px', margin: 0 }}>
           <StakeTriDataCard label="Total TRI Staked">
-            <Row align="center" justifyContent="start">
+            <Row align="center" justifyContent="center">
               <CurrencyLogo currency={TRI[chainId]} size={'20px'} style={{ marginRight: '10px' }} />
               <TYPE.black fontWeight={400}>{totalTriStakedFormatted ?? 'Loading...'}</TYPE.black>
             </Row>
           </StakeTriDataCard>
           <StakeTriDataCard label="Balance xTRI">
-            <Row align="center" justifyContent="start">
+            <Row align="center" justifyContent="center">
               <CurrencyLogo currency={XTRI[chainId]} size={'20px'} style={{ marginRight: '10px' }} />
               <TYPE.black fontWeight={400}>{xTriBalance?.toFixed(4) ?? 0}</TYPE.black>
             </Row>
           </StakeTriDataCard>
           <StakeTriDataCard label="Unstaked TRI">
-            <Row align="center" justifyContent="start">
+            <Row align="center" justifyContent="center">
               <CurrencyLogo currency={TRI[chainId]} size={'20px'} style={{ marginRight: '10px' }} />
               <TYPE.black fontWeight={400}>{triBalance?.toFixed(4) ?? 0}</TYPE.black>
             </Row>
