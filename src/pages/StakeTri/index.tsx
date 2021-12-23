@@ -21,6 +21,7 @@ import { useWalletModalToggle } from '../../state/application/hooks'
 import { Dots } from '../../components/swap/styleds'
 import { maxAmountSpend } from '../../utils/maxAmountSpend'
 import StakingAPRCard from './StakingAPRCard'
+import { PageWrapper } from '../../components/Page'
 
 const DataRow = styled(RowBetween)`
   ${({ theme }) => theme.mediaWidth.upToExtraSmall`
@@ -31,11 +32,6 @@ const DataRow = styled(RowBetween)`
 
 const TopSection = styled(AutoColumn)`
   max-width: 720px;
-  width: 100%;
-`
-
-const PageWrapper = styled(AutoColumn)`
-  max-width: 640px;
   width: 100%;
 `
 
@@ -186,8 +182,6 @@ export default function StakeTri() {
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
         <HighlightCard>
-          {/* <CardBGImage /> */}
-          {/* <CardNoise /> */}
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>
@@ -213,8 +207,6 @@ export default function StakeTri() {
                   </ExternalLink> */}
             </AutoColumn>
           </CardSection>
-          {/* <CardBGImage /> */}
-          {/* <CardNoise /> */}
         </HighlightCard>
       </TopSection>
 

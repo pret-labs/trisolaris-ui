@@ -8,14 +8,10 @@ import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage, HighlightCard } from '../../components/earn/styled'
 import { useTranslation } from 'react-i18next'
 import { useFarms } from '../../state/stake/apr'
-
-const PageWrapper = styled(AutoColumn)`
-  max-width: 640px;
-  width: 100%;
-`
+import { PageWrapper } from '../../components/Page'
 
 const TopSection = styled(AutoColumn)`
-  max-width: 720px;
+  max-width: ${({ theme }) => `${theme.pageWidth}px`};
   width: 100%;
 `
 
@@ -74,7 +70,6 @@ export default function Earn({
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
         <HighlightCard>
-          <CardNoise />
           <CardSection>
             <AutoColumn gap="md">
               <RowBetween>

@@ -25,7 +25,7 @@ export const DataCard = styled(AutoColumn) <{ disabled?: boolean }>`
  `
 
  export const HighlightCard = styled(AutoColumn) <{ disabled?: boolean }>`
-   border: ${({theme}) => `1px solid ${theme.primary6}`}
+   border: ${({theme}) => `1px solid ${theme.primary1}`}
    border-radius: 10px;
    width: 100%;
    position: relative;
