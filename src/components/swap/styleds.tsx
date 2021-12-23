@@ -49,7 +49,7 @@ export const ChevronWrapper = styled.div<{ clickable: boolean, height: number, w
 export const SectionBreak = styled.div`
   height: 1px;
   width: 100%;
-  background-color: ${({ theme }) => theme.bg3};
+  background-color: ${({ theme }) => theme.bg2};
 `
 
 export const BottomGrouping = styled.div`

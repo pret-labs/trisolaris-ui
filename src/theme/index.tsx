@@ -67,9 +67,14 @@ export function colors(darkMode: boolean): Colors {
     bg2: '#12141A', // swap container background
     bg3: '#1C1F26', // swap token background
 
+    // //specialty colors
+    // modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
+    // advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
+    
+    // SPECIALIST0X ADDS
     //specialty colors
-    modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
-    advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
+    modalBG: '#12141A',
+    advancedBG: '#1C1F26',
 
     //primary colors
     // primary1: darkMode ? '#cc0058' : '#cc0058',

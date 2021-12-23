@@ -4,33 +4,28 @@ import { AutoColumn } from '../Column'
 import { AutoRow, RowBetween } from '../Row'
 import { TYPE } from '../../theme'
 import { CardSection } from '../earn/styled'
+import { DarkGreyCard } from '../Card'
 
 type Props = {
     children: React.ReactNode,
     label: string,
 }
 
-const DataColumn = styled(RowBetween)`
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-   flex-direction: row;
- `};
+export const StyledDataCard = styled(DarkGreyCard)`
+   padding: 0;
+   ${({ theme }) => theme.mediaWidth.upToSmall`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+   `};
  `
 
-export const StyledDataCard = styled(AutoColumn)`
-   background-color: ${({ theme }) => theme.bg2}
-  border: 1px solid ${({ theme }) => theme.primary1};
-
-   border-radius: 10px;
-   width: 100%;
-   position: relative;
-   overflow: hidden;
- `
 export default function StakeTriDataCard({
     children,
     label,
 }: Props) {
     return (
-        <DataColumn style={{ alignItems: 'baseline' }}>
             <StyledDataCard>
                 <CardSection>
                     <AutoColumn gap="md">
@@ -41,6 +36,5 @@ export default function StakeTriDataCard({
                     </AutoColumn>
                 </CardSection>
             </StyledDataCard>
-        </DataColumn>
     )
 }

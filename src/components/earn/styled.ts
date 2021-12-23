@@ -24,8 +24,8 @@ export const DataCard = styled(AutoColumn) <{ disabled?: boolean }>`
    overflow: hidden;
  `
 
- export const GradientCard = styled(AutoColumn) <{ disabled?: boolean }>`
-   background-color: ${({theme}) => theme.primary6}
+ export const HighlightCard = styled(AutoColumn) <{ disabled?: boolean }>`
+   border: ${({theme}) => `1px solid ${theme.primary6}`}
    border-radius: 10px;
    width: 100%;
    position: relative;

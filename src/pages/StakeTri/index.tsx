@@ -1,7 +1,7 @@
 import { ChainId, CurrencyAmount, JSBI } from '@trisolaris/sdk'
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
-import { LightCard } from '../../components/Card'
+import { DarkGreyCard, LightCard } from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
 import Row, { RowBetween } from '../../components/Row'
 import { TRI, XTRI } from '../../constants'
@@ -11,7 +11,7 @@ import { tryParseAmount } from '../../state/swap/hooks'
 import { TYPE } from '../../theme'
 import { ClickableText } from '../Pool/styleds'
 import { useTokenBalance } from '../../state/wallet/hooks'
-import { GradientCard, CardBGImage, CardNoise, CardSection } from '../../components/earn/styled'
+import { HighlightCard, CardBGImage, CardNoise, CardSection } from '../../components/earn/styled'
 import StakeInputPanel from '../../components/StakeTri/StakeInputPanel'
 import CurrencyLogo from '../../components/CurrencyLogo'
 import { useTriBar, useTriBarStats } from '../../state/stakeTri/hooks'
@@ -23,7 +23,7 @@ import { maxAmountSpend } from '../../utils/maxAmountSpend'
 import StakingAPRCard from './StakingAPRCard'
 
 const DataRow = styled(RowBetween)`
-  ${({ theme }) => theme.mediaWidth.upToSmall`
+  ${({ theme }) => theme.mediaWidth.upToExtraSmall`
    flex-direction: column;
    margin: 15px;
  `};
@@ -185,7 +185,7 @@ export default function StakeTri() {
   return (
     <PageWrapper gap="lg" justify="center">
       <TopSection gap="md">
-        <GradientCard>
+        <HighlightCard>
           {/* <CardBGImage /> */}
           {/* <CardNoise /> */}
           <CardSection>
@@ -215,7 +215,7 @@ export default function StakeTri() {
           </CardSection>
           {/* <CardBGImage /> */}
           {/* <CardNoise /> */}
-        </GradientCard>
+        </HighlightCard>
       </TopSection>
 
       <TopSection gap="md">
@@ -223,7 +223,7 @@ export default function StakeTri() {
       </TopSection>
 
       <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
-        <DataRow style={{ alignItems: 'baseline', gap: '10px', margin: 0 }}>
+        <DataRow style={{ gap: '10px', margin: 0 }}>
           <StakeTriDataCard label="Total TRI Staked">
             <Row align="center" justifyContent="center">
               <CurrencyLogo currency={TRI[chainId]} size={'20px'} style={{ marginRight: '10px' }} />
@@ -246,7 +246,7 @@ export default function StakeTri() {
       </AutoColumn>
 
       <AutoColumn style={{ width: '100%' }}>
-        <LightCard>
+        <DarkGreyCard>
           <AutoColumn gap="20px">
             <RowBetween>
               <AutoColumn gap="20px" justify="start">
@@ -292,7 +292,7 @@ export default function StakeTri() {
                 </RowBetween>
               )}
           </div>
-        </LightCard>
+        </DarkGreyCard>
       </AutoColumn>
     </PageWrapper>
   )
