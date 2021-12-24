@@ -3,6 +3,7 @@ import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
 import { TYPE, ExternalLink } from '../../theme'
 import PoolCard from '../../components/earn/PoolCardTri'
+import FarmBanner from '../../components/earn/FarmBanner'
 import { RouteComponentProps } from 'react-router-dom'
 import { RowBetween } from '../../components/Row'
 import { CardSection, DataCard, CardNoise, CardBGImage, HighlightCard } from '../../components/earn/styled'
@@ -68,6 +69,7 @@ export default function Earn({
 
   return (
     <PageWrapper gap="lg" justify="center">
+      <FarmBanner />
       <TopSection gap="md">
         <HighlightCard>
           <CardSection>
