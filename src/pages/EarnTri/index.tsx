@@ -17,21 +17,16 @@ const TopSection = styled(AutoColumn)`
   width: 100%;
 `
 
-const PoolSection = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  column-gap: 10px;
-  row-gap: 15px;
-  width: 100%;
-  justify-self: center;
-`
-
 const PoolSectionV2 = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
   width: 100%;
   justify-self: center;
+  
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+    grid-template-columns: 1fr;
+ `};
 `
 
 const DataRow = styled(RowBetween)`
