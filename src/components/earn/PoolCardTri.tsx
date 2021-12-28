@@ -38,6 +38,9 @@ const AprContainer = styled.div`
   margin-left: 1rem;
 `
 
+// bgColor2 != null
+//   ? `linear-gradient(91.85% 100% at 1.84% 0%, ${bgColor1} 30%, ${bgColor2} 70%, ${showBackground ? theme.black : theme.bg5} 100%)`
+//   : `linear-gradient(91.85% 100% at 1.84% 0%, ${bgColor1} 0%, ${showBackground ? theme.black : theme.bg5} 100%) `};
 const Wrapper = styled(AutoColumn) <{ showBackground: boolean; bgColor1: any; bgColor2?: any }>`
   border-radius: 12px;
   width: 100%;
@@ -45,17 +48,30 @@ const Wrapper = styled(AutoColumn) <{ showBackground: boolean; bgColor1: any; bg
   position: relative;
   opacity: 1;
   background: ${({ theme, bgColor1, bgColor2, showBackground }) =>
-    bgColor2 != null
-      ? `radial-gradient(91.85% 100% at 1.84% 0%, ${bgColor1} 30%, ${bgColor2} 70%, ${showBackground ? theme.black : theme.bg5} 100%)`
-      : `radial-gradient(91.85% 100% at 1.84% 0%, ${bgColor1} 0%, ${showBackground ? theme.black : theme.bg5} 100%) `};
+    `linear-gradient(90deg, ${bgColor1} 0%, ${bgColor2} 90%);`
+    // `linear-gradient(90deg, rgba(0, 20, 255, 0.4) 0%, rgba(0, 80, 255, 0.4) 35.64%, rgba(50, 180, 255, 0.4) 72.13%, rgba(90, 255, 255, 0.4) 100%);`
+  }
   background-color: grey;
   color: ${({ theme, showBackground }) => (showBackground ? theme.white : theme.text1)} !important;
-
-  ${({ showBackground }) =>
-    showBackground &&
-    `  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
-     0px 24px 32px rgba(0, 0, 0, 0.01);`}
 `
+// const Wrapper = styled(AutoColumn) <{ showBackground: boolean; bgColor1: any; bgColor2?: any }>`
+//   border-radius: 12px;
+//   width: 100%;
+//   overflow: hidden;
+//   position: relative;
+//   opacity: 1;
+//   background: ${({ theme, bgColor1, bgColor2, showBackground }) =>
+//     bgColor2 != null
+//       ? `radial-gradient(91.85% 100% at 1.84% 0%, ${bgColor1} 30%, ${bgColor2} 70%, ${showBackground ? theme.black : theme.bg5} 100%)`
+//       : `radial-gradient(91.85% 100% at 1.84% 0%, ${bgColor1} 0%, ${showBackground ? theme.black : theme.bg5} 100%) `};
+//   background-color: grey;
+//   color: ${({ theme, showBackground }) => (showBackground ? theme.white : theme.text1)} !important;
+
+//   ${({ showBackground }) =>
+//     showBackground &&
+//     `  box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
+//      0px 24px 32px rgba(0, 0, 0, 0.01);`}
+// `
 
 const TopSection = styled.div`
   display: grid;
@@ -123,7 +139,7 @@ export default function PoolCard({ stakingInfo, version }: { stakingInfo: Stakin
   }
 
   return (
-    <Wrapper showBackground={isStaking} bgColor1={backgroundColor1} bgColor2={isDualRewards ? backgroundColor2 : null}>
+    <Wrapper showBackground={isStaking} bgColor1={backgroundColor1} bgColor2={backgroundColor2}>
       <TopSection>
         <DoubleCurrencyLogo currency0={currency0} currency1={currency1} size={24} />
         <AutoRow align="baseline">

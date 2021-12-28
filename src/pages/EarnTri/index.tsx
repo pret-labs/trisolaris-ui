@@ -3,6 +3,7 @@ import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
 import { TYPE, ExternalLink } from '../../theme'
 import PoolCard from '../../components/earn/PoolCardTri'
+import PoolCardTRIV2 from '../../components/earn/PoolCardTriV2'
 import FarmBanner from '../../components/earn/FarmBanner'
 import { RouteComponentProps } from 'react-router-dom'
 import { RowBetween } from '../../components/Row'
@@ -21,6 +22,14 @@ const PoolSection = styled.div`
   grid-template-columns: 1fr;
   column-gap: 10px;
   row-gap: 15px;
+  width: 100%;
+  justify-self: center;
+`
+
+const PoolSectionV2 = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
   width: 100%;
   justify-self: center;
 `
@@ -67,6 +76,9 @@ export default function Earn({
   const farmArrs = useFarms();
   const [searchQuery, setSearchQuery] = useState<string>('');
 
+  const dualRewardPools = POOLS_ORDER.filter(index => farmArrs[index].doubleRewards)
+  const nonDualRewardPools = POOLS_ORDER.filter(index => !farmArrs[index].doubleRewards)
+
   return (
     <PageWrapper gap="lg" justify="center">
       <FarmBanner />
@@ -92,29 +104,38 @@ export default function Earn({
         </HighlightCard>
       </TopSection>
 
-      <AutoColumn gap="lg" style={{ width: '100%', maxWidth: '720px' }}>
+      <AutoColumn gap="lg" style={{ width: '100%' }}>
         <DataRow style={{ alignItems: 'baseline' }}>
-          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>{t('earnPage.participatingPools')}</TYPE.mediumHeader>
+          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>
+            Dual Rewards Pools
+          </TYPE.mediumHeader>
         </DataRow>
-        <PoolSection>
-          {POOLS_ORDER.map(index => (
-            <PoolCard
+        <PoolSectionV2>
+          {dualRewardPools.map(index => (
+            <PoolCardTRIV2
               key={index}
               stakingInfo={farmArrs[index]}
               version={farmArrs[index].ID}
             />
           ))}
-        </PoolSection>
-        <PoolSection>
-          <DataRow style={{ alignItems: 'baseline' }}>
-            <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>Legacy Pools</TYPE.mediumHeader>
-          </DataRow>
-          <PoolCard
-            key={1}
-            stakingInfo={farmArrs[6]}
-            version={farmArrs[6].ID}
-          />
-        </PoolSection>
+        </PoolSectionV2>
+      </AutoColumn>
+      
+      <AutoColumn gap="lg" style={{ width: '100%' }}>
+        <DataRow style={{ alignItems: 'baseline' }}>
+          <TYPE.mediumHeader style={{ marginTop: '0.5rem' }}>
+            Participating Pools
+          </TYPE.mediumHeader>
+        </DataRow>
+        <PoolSectionV2>
+          {nonDualRewardPools.map(index => (
+            <PoolCardTRIV2
+              key={index}
+              stakingInfo={farmArrs[index]}
+              version={farmArrs[index].ID}
+            />
+          ))}
+        </PoolSectionV2>
       </AutoColumn>
     </PageWrapper>
   )
