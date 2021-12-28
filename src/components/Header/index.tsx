@@ -312,11 +312,6 @@ export default function Header() {
       </HeaderRow>
       <HeaderControls>
         <HeaderElement>
-          <HideSmall>
-            {chainId && NETWORK_LABELS[chainId] && (
-              <NetworkCard title={NETWORK_LABELS[chainId]}>{NETWORK_LABELS[chainId]}</NetworkCard>
-            )}
-          </HideSmall>
             <TRIWrapper active={true} isDark={isDark}>
               <TRIButton isDark={isDark} onClick={(e) => {
                 e.currentTarget.blur();
