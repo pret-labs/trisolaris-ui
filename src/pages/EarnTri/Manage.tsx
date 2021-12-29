@@ -30,11 +30,8 @@ import { BIG_INT_ZERO, PNG } from '../../constants'
 import { useTranslation } from 'react-i18next'
 import { useSingleFarm } from '../../state/stake/user-farms'
 import useUserFarmStatistics from '../../state/stake/useUserFarmStatistics'
-
-const PageWrapper = styled(AutoColumn)`
-  max-width: 640px;
-  width: 100%;
-`
+import Card, { DarkGreyCard } from '../../components/Card'
+import { PageWrapper } from '../../components/Page'
 
 const PositionInfo = styled(AutoColumn)<{ dim: any }>`
   position: relative;
@@ -66,11 +63,30 @@ const StyledBottomCard = styled(DataCard)<{ dim: any }>`
   z-index: 1;
 `
 
-const PoolData = styled(DataCard)`
-  background: none;
-  border: 1px solid ${({ theme }) => theme.bg4};
-  padding: 1rem;
-  z-index: 1;
+const PoolData = styled(DarkGreyCard)`
+  ${({ theme }) => theme.mediaWidth.upToSmall`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 110px;
+    text-align: center;
+  `};
+`
+
+const Wrapper = styled(Card) < { bgColor1: string | null, bgColor2?: string | null, showBackground: boolean }>`
+  border: ${({ showBackground, theme }) =>
+    showBackground ? `1px solid ${theme.primary1}` : `1px solid ${theme.bg3};`
+  }
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  // grid-template-rows: 1fr 1fr 1fr;
+  gap: 12px;
+  box-shadow: ${({ showBackground, theme }) =>
+    showBackground ? `0px 0px 8px 5px ${theme.primary1}` : `0 2px 8px 0 ${theme.bg3}`
+  }
+
 `
 
 const VoteCard = styled(DataCard)`
@@ -88,6 +104,22 @@ const DataRow = styled(RowBetween)`
    `};
 `
 
+const BackgroundColor = styled.span< { bgColor1: string | null, bgColor2?: string | null }>`
+   background: ${({ theme, bgColor1, bgColor2 }) =>
+    `linear-gradient(90deg, ${bgColor1 ?? theme.blue1} 0%, ${bgColor2 ?? 'grey'} 90%);`
+  }
+   background-size: cover;
+   mix-blend-mode: overlay;
+   border-radius: 10px;
+   width: 100%;
+   height: 100%;
+   opacity: 0.5;
+   position: absolute;
+   top: 0;
+   left: 0;
+   user-select: none;
+ `
+
 export default function Manage({
   match: {
     params: { currencyIdA, currencyIdB, version }
@@ -103,14 +135,14 @@ export default function Manage({
   const farmArr = useSingleFarm(version)
 
   const stakingInfo = farmArr[0]
-  let backgroundColor: string
+  let backgroundColor1: string
   let token: Token | undefined
 
   const totalStakedInUSD = stakingInfo.totalStakedInUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
   const totalRewardRate = stakingInfo.totalRewardRate.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
 
   // get the color of the token
-  backgroundColor = useColorWithDefault('#2172E5', token);
+  backgroundColor1 = useColorWithDefault('#2172E5', token);
 
   // detect existing unstaked LP position to show add button if none found
   const userLiquidityUnstaked = useTokenBalance(account ?? undefined, stakingInfo?.stakedAmount?.token)
@@ -162,16 +194,16 @@ export default function Manage({
   return (
     <PageWrapper gap="lg" justify="center">
       <RowBetween style={{ gap: '24px' }}>
-        <TYPE.mediumHeader style={{ margin: 0 }}>
+        <TYPE.largeHeader style={{ margin: 0 }}>
           {currencyA?.symbol}-{currencyB?.symbol} {t('earnPage.liquidityMining')}
-        </TYPE.mediumHeader>
-        <DoubleCurrencyLogo currency0={currencyA ?? undefined} currency1={currencyB ?? undefined} size={24} />
+        </TYPE.largeHeader>
+        <DoubleCurrencyLogo currency0={currencyA ?? undefined} currency1={currencyB ?? undefined} size={32} />
       </RowBetween>
 
       <DataRow style={{ gap: '24px' }}>
         <PoolData>
           <AutoColumn gap="sm">
-            <TYPE.body style={{ margin: 0 }}>{t('earnPage.totalStaked')}</TYPE.body>
+            <TYPE.subHeader style={{ margin: 0 }}>{t('earnPage.totalStaked')}</TYPE.subHeader>
             <TYPE.body fontSize={24} fontWeight={500}>
               {`$${totalStakedInUSD}`}
             </TYPE.body>
@@ -179,19 +211,16 @@ export default function Manage({
         </PoolData>
         <PoolData>
           <AutoColumn gap="sm">
-            <TYPE.body style={{ margin: 0 }}>{t('earnPage.poolRate')}</TYPE.body>
+            <TYPE.subHeader style={{ margin: 0 }}>{t('earnPage.poolRate')}</TYPE.subHeader>
             <TYPE.body fontSize={24} fontWeight={500}>
-              {`${totalRewardRate}`}
-              {/* {stakingInfo?.totalRewardRate
-                ?.multiply((60 * 60 * 24 * 7).toString())
-                ?.toFixed(0, { groupSeparator: ',' }) ?? '-'} */}
-              {t('earnPage.pngPerWeek')}
+              {`${totalRewardRate}` + t('earnPage.pngPerWeek')}
             </TYPE.body>
           </AutoColumn>
         </PoolData>
       </DataRow>
 
-      {showAddLiquidityButton && (
+      {/* @TODO */}
+      {showAddLiquidityButton ? (
         <VoteCard>
           <CardBGImage />
           <CardNoise />
@@ -218,9 +247,10 @@ export default function Manage({
           <CardBGImage />
           <CardNoise />
         </VoteCard>
-      )}
+      ): null}
 
-      {stakingInfo && (
+      {/* @TODO */}
+      {stakingInfo ? (
         <>
           <StakingModal
             isOpen={showStakingModal}
@@ -239,14 +269,14 @@ export default function Manage({
             stakingInfo={stakingInfo}
           />
         </>
-      )}
+      ): null}
 
       <PositionInfo gap="lg" justify="center" dim={showAddLiquidityButton}>
         <BottomSection gap="lg" justify="center">
-          <StyledDataCard disabled={disableTop} bgColor={backgroundColor} showBackground={!showAddLiquidityButton}>
+          <Wrapper disabled={disableTop} bgColor1={backgroundColor1} bgColor2={null} showBackground={!showAddLiquidityButton}>
             <CardSection>
-              <CardBGImage desaturate />
-              <CardNoise />
+              {/* <CardBGImage desaturate /> */}
+              {/* <CardNoise /> */}
               <AutoColumn gap="md">
                 <RowBetween>
                   <TYPE.white fontWeight={600}>{t('earnPage.liquidityDeposits')}</TYPE.white>
@@ -291,10 +321,11 @@ export default function Manage({
                 </RowBetween>
               </AutoColumn>
             </CardSection>
-          </StyledDataCard>
+          </Wrapper>
+          
           <StyledBottomCard dim={stakingInfo?.stakedAmount?.equalTo(JSBI.BigInt(0))}>
-            <CardBGImage desaturate />
-            <CardNoise />
+            {/* <CardBGImage desaturate />
+            <CardNoise /> */}
             <AutoColumn gap="sm">
               <RowBetween>
                 <div>
@@ -331,15 +362,6 @@ export default function Manage({
                   />
                 </TYPE.largeHeader>
                 )}
-                {/*<TYPE.black fontSize={16} fontWeight={500}>
-                  <span role="img" aria-label="wizard-icon" style={{ marginRight: '8px ' }}>
-                    ⚡
-                  </span>
-                  {stakingInfo?.rewardRate
-                    ?.multiply((60 * 60 * 24 * 7).toString())
-                    ?.toSignificant(4, { groupSeparator: ',' }) ?? '-'}
-                  {t('earnPage.pngPerWeek')}
-                </TYPE.black>*/}
               </RowBetween>
             </AutoColumn>
           </StyledBottomCard>

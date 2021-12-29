@@ -4,18 +4,19 @@ import { RowBetween } from '../Row'
 import styled from 'styled-components'
 import { TYPE, StyledInternalLink } from '../../theme'
 import DoubleCurrencyLogo from '../DoubleLogo'
-import { CETH, Token } from '@trisolaris/sdk'
+import { CETH, Currency, Token } from '@trisolaris/sdk'
 import { ButtonPrimary } from '../Button'
 import { AutoRow } from '../Row'
 import { StakingTri, StakingTriFarms, StakingTriStakedAmounts } from '../../state/stake/stake-constants'
-import { useColor } from '../../hooks/useColor'
+import { useColor, useColorForToken } from '../../hooks/useColor'
 import { currencyId } from '../../utils/currencyId'
 import { Break, CardNoise, CardBGImage } from './styled'
 import { unwrappedToken } from '../../utils/wrappedCurrency'
-import { PNG } from '../../constants'
+import { PNG, TRI } from '../../constants'
 import { useTranslation } from 'react-i18next'
 import Card from '../Card'
 import { useHistory } from 'react-router-dom'
+import getTokenPairRenderOrder from '../../utils/getTokenPairRenderOrder'
 
 const Wrapper = styled(Card) < { bgColor1: string | null, bgColor2?: string | null, isDualRewards: boolean }>`
   border: ${({ isDualRewards, theme }) =>
@@ -33,7 +34,7 @@ const Wrapper = styled(Card) < { bgColor1: string | null, bgColor2?: string | nu
 
 `
 
-const BackgroundColor = styled.span< { bgColor1: string | null, bgColor2?: string | null, isDualRewards: boolean }>`
+const BackgroundColor = styled.span< { bgColor1: string | null, bgColor2?: string | null}>`
    background: ${({ theme, bgColor1, bgColor2 }) =>
     `linear-gradient(90deg, ${bgColor1 ?? theme.blue1} 0%, ${bgColor2 ?? 'grey'} 90%);`
   }
@@ -52,9 +53,7 @@ const BackgroundColor = styled.span< { bgColor1: string | null, bgColor2?: strin
 const GREY_ICON_TOKENS = ['ETH', 'WETH', 'WBTC', 'WNEAR'];
 
 export default function PoolCardTRIV2({ stakingInfo, version }: { stakingInfo: StakingTri; version: number }) {
-  const token0 = stakingInfo.tokens[0]
-  const token1 = stakingInfo.tokens[1]
-
+  const [token0, token1] = getTokenPairRenderOrder(stakingInfo.tokens[0], stakingInfo.tokens[1])
   const currency0 = unwrappedToken(token0)
   const currency1 = unwrappedToken(token1)
 
@@ -62,19 +61,9 @@ export default function PoolCardTRIV2({ stakingInfo, version }: { stakingInfo: S
   const isStaking = Boolean(stakingInfo?.stakedAmount?.greaterThan('0') ?? false)
   const history = useHistory();
 
-  const token: Token =
-    currency0 === CETH || currency1 === CETH
-      ? currency0 === CETH
-        ? token1
-        : token0
-      : token0.equals(PNG[token0.chainId])
-        ? token1
-        : token0
-
   // get the color of the token
-  let backgroundColor1 = useColor(token)
-  const secondaryToken = token === token1 ? token0 : token1;
-  let backgroundColor2 = useColor(secondaryToken);
+  const backgroundColor1 = useColorForToken(token0)
+  let backgroundColor2 = useColor(token1);
 
   const totalStakedInUSD = stakingInfo.totalStakedInUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
   const isDualRewards = stakingInfo.chefVersion == 1
@@ -83,18 +72,14 @@ export default function PoolCardTRIV2({ stakingInfo, version }: { stakingInfo: S
   // Colors are dynamically chosen based on token logos
   // These tokens are mostly grey; Override color to blue
 
-  if (GREY_ICON_TOKENS.includes(token?.symbol ?? '')) {
-    backgroundColor1 = '#2172E5';
-  }
-
   // Only override `backgroundColor2` if it's a dual rewards pool
-  if (isDualRewards && GREY_ICON_TOKENS.includes(secondaryToken?.symbol ?? '')) {
+  if (isDualRewards && GREY_ICON_TOKENS.includes(token1?.symbol ?? '')) {
     backgroundColor2 = '#2172E5';
   }
 
   return (
     <div style={{ position: 'relative' }}>
-      <BackgroundColor bgColor1={backgroundColor1} bgColor2={backgroundColor2} isDualRewards={isDualRewards} />
+      <BackgroundColor bgColor1={backgroundColor1} bgColor2={backgroundColor2} />
       <Wrapper bgColor1={backgroundColor1} bgColor2={backgroundColor2} isDualRewards={isDualRewards}>
         <AutoRow justifyContent="space-between">
           <div style={{ display: 'flex' }}>
