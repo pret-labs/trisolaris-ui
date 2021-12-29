@@ -32,6 +32,7 @@ import { useSingleFarm } from '../../state/stake/user-farms'
 import useUserFarmStatistics from '../../state/stake/useUserFarmStatistics'
 import Card, { DarkGreyCard } from '../../components/Card'
 import { PageWrapper } from '../../components/Page'
+import { addCommasToNumber } from '../../utils'
 
 const PositionInfo = styled(AutoColumn)<{ dim: any }>`
   position: relative;
@@ -138,8 +139,8 @@ export default function Manage({
   let backgroundColor1: string
   let token: Token | undefined
 
-  const totalStakedInUSD = stakingInfo.totalStakedInUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-  const totalRewardRate = stakingInfo.totalRewardRate.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  const totalStakedInUSD = addCommasToNumber(stakingInfo.totalStakedInUSD.toString());
+  const totalRewardRate = addCommasToNumber(stakingInfo.totalRewardRate.toString());
 
   // get the color of the token
   backgroundColor1 = useColorWithDefault('#2172E5', token);
@@ -339,6 +340,7 @@ export default function Manage({
               </RowBetween>
               <RowBetween style={{ alignItems: 'baseline' }}>
                 <TYPE.largeHeader fontSize={36} fontWeight={600}>
+                  {/* Create component so this works */}
                   <CountUp
                     key={countUpAmount}
                     isCounting

@@ -17,6 +17,7 @@ import { useTranslation } from 'react-i18next'
 import Card from '../Card'
 import { useHistory } from 'react-router-dom'
 import getTokenPairRenderOrder from '../../utils/getTokenPairRenderOrder'
+import { addCommasToNumber } from '../../utils'
 
 const Wrapper = styled(Card) < { bgColor1: string | null, bgColor2?: string | null, isDualRewards: boolean }>`
   border: ${({ isDualRewards, theme }) =>
@@ -65,7 +66,7 @@ export default function PoolCardTRIV2({ stakingInfo, version }: { stakingInfo: S
   const backgroundColor1 = useColorForToken(token0)
   let backgroundColor2 = useColor(token1);
 
-  const totalStakedInUSD = stakingInfo.totalStakedInUSD.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+  const totalStakedInUSD = addCommasToNumber(stakingInfo.totalStakedInUSD.toString());
   const isDualRewards = stakingInfo.chefVersion == 1
   const doubleRewardsOn = stakingInfo.doubleRewards
 
