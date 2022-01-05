@@ -43,7 +43,7 @@ const StakeClickableText = styled(ClickableText) <{ selected: boolean }>`
 `
 
 const LargeHeaderWhite = styled(TYPE.largeHeader)`
-  color: white;
+  color: ${({ theme }) => theme.white};
 `
 
 enum StakeState {

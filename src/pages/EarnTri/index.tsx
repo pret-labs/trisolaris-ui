@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { AutoColumn } from '../../components/Column'
 import styled from 'styled-components'
-import { TYPE, ExternalLink } from '../../theme'
+import { TYPE, ExternalLink, colors } from '../../theme'
 import PoolCard from '../../components/earn/PoolCardTri'
 import { RouteComponentProps } from 'react-router-dom'
 import { RowBetween } from '../../components/Row'
@@ -11,6 +11,8 @@ import { useFarms } from '../../state/stake/apr'
 import { PageWrapper } from '../../components/Page'
 import PoolCardTRI from '../../components/earn/PoolCardTri'
 import FarmBanner from '../../components/earn/FarmBanner'
+
+const { white } = colors();
 
 const TopSection = styled(AutoColumn)`
   max-width: ${({ theme }) => theme.pageWidth};
@@ -91,7 +93,7 @@ export default function Earn({
                 <TYPE.white fontSize={14}>{t('earnPage.depositLiquidity')}</TYPE.white>
               </RowBetween>{' '}
               <ExternalLink
-                style={{ color: 'white', textDecoration: 'underline' }}
+                style={{ color: white, textDecoration: 'underline' }}
                 href="https://medium.com/trisolaris-labs"
                 target="_blank"
               >

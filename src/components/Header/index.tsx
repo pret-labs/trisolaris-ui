@@ -118,7 +118,7 @@ const AccountElement = styled.div<{ active: boolean }>`
 `
 
 const TRIButton = styled(ButtonSecondary)`
-  color: white;
+  color: ${({theme}) => theme.white};
   padding: 4px 8px;
   height: 36px;
   font-weight: 500;
@@ -133,7 +133,7 @@ const TRIButton = styled(ButtonSecondary)`
 `
 
 const TRIWrapper = styled(AccountElement)`
-  color: white;
+  color: ${({theme}) => theme.white};
   padding: 4px 0;
   height: 36px;
   font-weight: 500;

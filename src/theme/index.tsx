@@ -31,20 +31,20 @@ const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } 
   {}
 ) as any
 
-const white = '#FFFFFF'
+const white = '#f7f7f7'
 const black = '#000000'
 
-export function colors(darkMode: boolean): Colors {
+export function colors(darkMode: boolean = true): Colors {
   return {
     // base
     white,
     black,
 
     // text
-    text1: '#FFF',
-    text2: '#FFF',
+    text1: '#f7f7f7',
+    text2: '#f7f7f7',
     text3: 'rgb(108, 114, 132)',
-    text4: '#FFF',
+    text4: '#f7f7f7',
     text5: '#b1b1b1', // used on PoolCardTri as a muted header color
 
     // backgrounds / greys
@@ -67,12 +67,12 @@ export function colors(darkMode: boolean): Colors {
     primary6: '#0050FF',
 
     // color text
-    primaryText1: darkMode ? '#ffffff' : '#ffffff',
+    primaryText1: '#f7f7f7',
 
     // secondary colors
-    secondary1: darkMode ? '#2172E5' : '#ff007a',
-    secondary2: darkMode ? '#17000b26' : '#F6DDE8',
-    secondary3: darkMode ? '#17000b26' : '#FDEAF1',
+    secondary1: '#2172E5',
+    secondary2: '#17000b26',
+    secondary3: '#17000b26',
 
     // other
     red1: '#FF6871',
@@ -83,16 +83,12 @@ export function colors(darkMode: boolean): Colors {
     blue1: '#2172E5',
 
     avaxRed: '#e60063'
-
-    // dont wanna forget these blue yet
-    // blue4: darkMode ? '#153d6f70' : '#C4D9F8',
-    // blue5: darkMode ? '#153d6f70' : '#EBF4FF',
   }
 }
 
 export function theme(darkMode: boolean): DefaultTheme {
   return {
-    ...colors(darkMode),
+    ...colors(false),
 
     grids: {
       sm: 8,
@@ -101,7 +97,7 @@ export function theme(darkMode: boolean): DefaultTheme {
     },
 
     //shadows
-    shadow1: darkMode ? '#000' : '#2F80ED',
+    shadow1: '#000',
 
     // media queries
     mediaWidth: mediaWidthTemplates,
@@ -141,7 +137,7 @@ export const TYPE = {
     return <TextWrapper fontWeight={500} color={'text1'} {...props} />
   },
   white(props: TextProps) {
-    return <TextWrapper fontWeight={500} color={'white'} {...props} />
+    return <TextWrapper fontWeight={500} color={white} {...props} />
   },
   body(props: TextProps) {
     return <TextWrapper fontWeight={400} fontSize={16} color={'text1'} {...props} />
