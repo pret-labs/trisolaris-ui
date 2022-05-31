@@ -105,6 +105,8 @@ function createMergedTokenMap(allTokens) {
   // assignments of previous sources.
   const mergedTokenMap = _.merge(tokensRepoMap, TOKEN_MAP)
 
+  console.log('mergedTokenMap', mergedTokenMap);
+
   // Fill in partially-filled xchain tokens with xchain compatible token data
   return _.transform(
     mergedTokenMap,

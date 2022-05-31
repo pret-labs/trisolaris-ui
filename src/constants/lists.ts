@@ -10,8 +10,11 @@ export const AVAX_BRIDGE_LIST = 'https://raw.githubusercontent.com/pangolindex/t
 export const POLYGON_BRIDGE_LIST =
   'https://gist.githubusercontent.com/baboobhaiya/8ba0cdfc6d942e2d828500dee3ff1a16/raw/07dc935f7ebc8e1716296719b8b06ebf5ee977bd/polygon_token_list'
 
-export const TRISOLARIS_LIST =
-  'https://raw.githubusercontent.com/trisolaris-labs/tokens/master/lists/1313161554/list.json'
+export const MOCKED_LIST_FOR_PRET =
+  'https://raw.githubusercontent.com/linguists/tri-tokens/pret-mocked/lists/1313161554/list.json';
+
+export const TRISOLARIS_LIST = MOCKED_LIST_FOR_PRET;
+  // 'https://raw.githubusercontent.com/trisolaris-labs/tokens/master/lists/1313161554/list.json'
 
 export const AURORA_LIST =
   'https://raw.githubusercontent.com/aurora-is-near/bridge-assets/master/assets/aurora.tokenlist.json'
@@ -19,7 +22,7 @@ export const AURORA_LIST =
 const DEFAULT_LISTS: Map<ChainId, string> = new Map([
   [ChainId.AVALANCHE, AVAX_BRIDGE_LIST],
   [ChainId.POLYGON, POLYGON_BRIDGE_LIST],
-  [ChainId.AURORA, TRISOLARIS_LIST]
+  [ChainId.AURORA, MOCKED_LIST_FOR_PRET]
 ])
 const STABLECOIN_LISTS: Map<ChainId, string> = new Map([[ChainId.AVALANCHE, AVAX_STABLECOIN_TOKEN_LIST]])
 const LIST_OF_LISTS: Map<ChainId, string[]> = new Map([
@@ -28,7 +31,7 @@ const LIST_OF_LISTS: Map<ChainId, string[]> = new Map([
     [AEB_TOKENLIST, TOP_15_TOKEN_List, DEFI_TOKEN_LIST, AVAX_STABLECOIN_TOKEN_LIST, AVAX_BRIDGE_LIST]
   ],
   [ChainId.POLYGON, [POLYGON_BRIDGE_LIST]],
-  [ChainId.AURORA, [TRISOLARIS_LIST]]
+  [ChainId.AURORA, [MOCKED_LIST_FOR_PRET]]
 ])
 
 export const DEFAULT_LIST_OF_LISTS = LIST_OF_LISTS.get(ChainId.AURORA)!

@@ -32,7 +32,8 @@ module.exports = {
       'USDT',
       'Tether USD'
     ),
-    [ChainId.POLYGON]: new Token(ChainId.POLYGON, '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', 6, 'USDT', 'Tether USD')
+    [ChainId.POLYGON]: new Token(ChainId.POLYGON, '0xc2132d05d31c914a87c6611c10748aeb04b58e8f', 6, 'USDT', 'Tether USD'),
+    [ChainId.AURORA]: new Token(ChainId.AURORA, '0xB7f348F0913FBc871B7E44C82aBB2d662F4c751a', 6, 'USDT', 'Tether USD'),
   },
 
   WBTC: {
@@ -49,7 +50,8 @@ module.exports = {
       8,
       'WBTC',
       'Wrapped Bitcoin'
-    )
+    ),
+    [ChainId.AURORA]: new Token(ChainId.AURORA, '0x7D99EdfE81833e371d007c57Cc9BF86bD719d60c', 8, 'WBTC', 'Wrapped BTC'),
   },
 
   DAI: {
@@ -66,7 +68,8 @@ module.exports = {
       18,
       'DAI',
       'Dai Stablecoin'
-    )
+    ),
+    [ChainId.AURORA]: new Token(ChainId.AURORA, '0xAF65ff571f2D7193d4FeCfFEFA9AaF78ea993400', 18, 'DAI', 'Dai Stablecoin'),
   },
 
   USDC: {
@@ -77,7 +80,8 @@ module.exports = {
       'USDC',
       'USD Coin'
     ),
-    [ChainId.POLYGON]: new Token(ChainId.POLYGON, '0x2791bca1f2de4661ed88a30c99a7a9449aa84174', 6, 'USDC', 'USD Coin')
+    [ChainId.POLYGON]: new Token(ChainId.POLYGON, '0x2791bca1f2de4661ed88a30c99a7a9449aa84174', 6, 'USDC', 'USD Coin'),
+    [ChainId.AURORA]: new Token(ChainId.AURORA, '0x108C732f2E87C50fc591687Fa12b0f996f1f6F8B', 6, 'USDC', 'USD Coin'),
   },
 
   AAVE: {

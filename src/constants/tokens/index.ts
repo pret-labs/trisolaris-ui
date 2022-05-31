@@ -13,28 +13,28 @@ export const DAI: { [chainId in ChainId]: Token } = {
   [ChainId.POLYGON]: new Token(ChainId.POLYGON, '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.FUJI]: new Token(ChainId.FUJI, '0x0000000000000000000000000000000000000000', 18, 'DAI', 'Dai Stablecoin'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xbA7dEebBFC5fA1100Fb055a87773e1E99Cd3507a', 18, 'DAI', 'Dai Stablecoin'),
-  [ChainId.AURORA]: new Token(ChainId.AURORA, '0xe3520349F477A5F6EB06107066048508498A291b', 18, 'DAI', 'Dai Stablecoin'),
+  [ChainId.AURORA]: new Token(ChainId.AURORA, '0xAF65ff571f2D7193d4FeCfFEFA9AaF78ea993400', 18, 'DAI', 'Dai Stablecoin'),
 }
 
 export const WBTC: { [chainId in ChainId]: Token } = {
   [ChainId.POLYGON]: new Token(ChainId.POLYGON, '0x1BFD67037B42Cf73acF2047067bd4F2C47D9BfD6', 8, 'WBTC', 'Wrapped Bitcoin'),
   [ChainId.FUJI]: new Token(ChainId.FUJI, '0x0000000000000000000000000000000000000000', 8, 'WBTC', 'Wrapped Bitcoin'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0x408D4cD0ADb7ceBd1F1A1C33A0Ba2098E1295bAB', 8, 'WBTC', 'Wrapped Bitcoin'),
-  [ChainId.AURORA]: new Token(ChainId.AURORA, '0xF4eB217Ba2454613b15dBdea6e5f22276410e89e', 8, 'WBTC', 'Wrapped Bitcoin'),
+  [ChainId.AURORA]: new Token(ChainId.AURORA, '0x7D99EdfE81833e371d007c57Cc9BF86bD719d60c', 8, 'WBTC', 'Wrapped BTC'),
 }
 
 export const USDC: { [chainId in ChainId]: Token } = {
   [ChainId.POLYGON]: new Token(ChainId.POLYGON, '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174', 6, 'USDC', 'USD Coin'),
   [ChainId.FUJI]: new Token(ChainId.FUJI, '0x0000000000000000000000000000000000000000', 6, 'USDC', 'USD Coin'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xA7D7079b0FEaD91F3e65f86E8915Cb59c1a4C664', 6, 'USDC', 'USD Coin'),
-  [ChainId.AURORA]: new Token(ChainId.AURORA, '0xB12BFcA5A55806AaF64E99521918A4bf0fC40802', 6, 'USDC', 'USD Coin'),
+  [ChainId.AURORA]: new Token(ChainId.AURORA, '0x108C732f2E87C50fc591687Fa12b0f996f1f6F8B', 6, 'USDC', 'USD Coin'),
 }
 
 export const USDT: { [chainId in ChainId]: Token } = {
   [ChainId.POLYGON]: new Token(ChainId.POLYGON, '0xc2132D05D31c914a87C6611C10748AEb04B58e8F', 6, 'USDT', 'Tether USD'),
   [ChainId.FUJI]: new Token(ChainId.FUJI, '0x0000000000000000000000000000000000000000', 6, 'USDT', 'Tether USD'),
   [ChainId.AVALANCHE]: new Token(ChainId.AVALANCHE, '0xde3A24028580884448a5397872046a019649b084', 6, 'USDT', 'Tether USD'),
-  [ChainId.AURORA]: new Token(ChainId.AURORA, '0x4988a896b1227218e4A686fdE5EabdcAbd91571f', 6, 'USDT', 'Tether USD'),
+  [ChainId.AURORA]: new Token(ChainId.AURORA, '0xB7f348F0913FBc871B7E44C82aBB2d662F4c751a', 6, 'USDT', 'Tether USD'),
 }
 
 export const WNEAR: { [chainId in ChainId]: Token } = {
