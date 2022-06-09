@@ -1,4 +1,4 @@
-import { Trade, TradeType, Percent } from '@trisolaris/sdk'
+import { Trade, TradeType, Percent } from '@pret/tri-sdk'
 import React, { useContext, useMemo, useState } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'

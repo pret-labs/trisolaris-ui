@@ -1,4 +1,4 @@
-import { currencyEquals, Trade, Percent } from '@trisolaris/sdk'
+import { currencyEquals, Trade, Percent } from '@pret/tri-sdk'
 import React, { useCallback, useMemo } from 'react'
 import TransactionConfirmationModal, {
   ConfirmationModalContent,

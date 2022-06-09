@@ -1,4 +1,4 @@
-import { Currency, CETH, Token } from '@trisolaris/sdk'
+import { Currency, CETH, Token } from '@pret/tri-sdk'
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CurrencyAmount, Fraction, JSBI } from '@trisolaris/sdk'
+import { CurrencyAmount, Fraction, JSBI } from '@pret/tri-sdk'
 
 import { BIG_INT_ZERO } from '../../constants'
 

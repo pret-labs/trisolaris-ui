@@ -1,4 +1,4 @@
-import { JSBI } from '@trisolaris/sdk'
+import { JSBI } from '@pret/tri-sdk'
 import React, { useEffect, useRef, useState, useContext, useCallback } from 'react'
 import BalanceButtonValueEnum from '../../components/BalanceButton/BalanceButtonValueEnum'
 import { ButtonLight, ButtonConfirmed, ButtonError } from '../../components/Button'

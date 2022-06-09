@@ -1,4 +1,4 @@
-import { JSBI, Token, TokenAmount } from '@trisolaris/sdk'
+import { JSBI, Token, TokenAmount } from '@pret/tri-sdk'
 import { useTotalStakedInPool } from '../../data/TotalStakedInPool'
 import { ChefVersions } from './stake-constants'
 import { addCommasToNumber } from '../../utils'

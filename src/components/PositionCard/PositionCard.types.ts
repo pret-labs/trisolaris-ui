@@ -1,4 +1,4 @@
-import { Pair } from '@trisolaris/sdk'
+import { Pair } from '@pret/tri-sdk'
 
 export interface PositionCardProps {
   pair: Pair

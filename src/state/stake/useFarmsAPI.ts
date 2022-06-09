@@ -1,4 +1,4 @@
-import { ChainId } from '@trisolaris/sdk'
+import { ChainId } from '@pret/tri-sdk'
 import { STAKING, StakingTriFarms, tokenAmount } from './stake-constants'
 import { useActiveWeb3React } from '../../hooks'
 import { useFetchStakingInfoData } from '../../fetchers/farms'

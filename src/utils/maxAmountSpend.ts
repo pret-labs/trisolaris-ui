@@ -1,4 +1,4 @@
-import { CurrencyAmount, CETH, JSBI } from '@trisolaris/sdk'
+import { CurrencyAmount, CETH, JSBI } from '@pret/tri-sdk'
 import { BIG_INT_ZERO as MIN_ETH } from '../constants'
 
 /**

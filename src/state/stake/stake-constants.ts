@@ -1,4 +1,4 @@
-import { ChainId, Token, TokenAmount, WETH, JSBI } from '@trisolaris/sdk'
+import { ChainId, Token, TokenAmount, WETH, JSBI } from '@pret/tri-sdk'
 import _ from 'lodash'
 import { ZERO_ADDRESS } from '../../constants'
 import {

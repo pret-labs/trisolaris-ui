@@ -1,4 +1,4 @@
-import { ChainId } from '@trisolaris/sdk';
+import { ChainId } from '@pret/tri-sdk';
 import { STAKING } from '../stake-constants';
 
 describe('stake-constants.ts', () => {

@@ -1,6 +1,6 @@
 // TODO: Actually calculate price
 
-import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from '@trisolaris/sdk'
+import { ChainId, Currency, currencyEquals, JSBI, Price, WETH } from '@pret/tri-sdk'
 import { useMemo } from 'react'
 import { BIG_INT_ZERO } from '../constants'
 import { USDC as usdcDef, USDT as usdtDef } from '../constants/tokens'

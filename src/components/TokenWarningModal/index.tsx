@@ -1,4 +1,4 @@
-import { Token } from '@trisolaris/sdk'
+import { Token } from '@pret/tri-sdk'
 import { transparentize } from 'polished'
 import React, { useCallback, useMemo, useState } from 'react'
 import styled from 'styled-components'

@@ -1,4 +1,4 @@
-import { Currency } from '@trisolaris/sdk'
+import { Currency } from '@pret/tri-sdk'
 import React from 'react'
 import styled from 'styled-components'
 import CurrencyLogo from '../CurrencyLogo'

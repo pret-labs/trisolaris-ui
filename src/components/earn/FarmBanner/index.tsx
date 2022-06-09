@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { JSBI } from '@trisolaris/sdk'
+import { JSBI } from '@pret/tri-sdk'
 
 import Card from '../../Card'
 import { AutoRow } from '../../Row'

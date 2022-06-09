@@ -1,4 +1,4 @@
-import { JSBI, Token } from '@trisolaris/sdk'
+import { JSBI, Token } from '@pret/tri-sdk'
 import { useCallback, useMemo } from 'react'
 
 import {

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Price } from '@trisolaris/sdk'
+import { Price } from '@pret/tri-sdk'
 import { useContext } from 'react'
 import { Repeat } from 'react-feather'
 import { Text } from 'rebass'

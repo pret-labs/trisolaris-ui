@@ -1,4 +1,4 @@
-import { ChainId } from '@trisolaris/sdk'
+import { ChainId } from '@pret/tri-sdk'
 import { createStore, Store } from 'redux'
 import { addPopup, ApplicationModal, removePopup, setOpenModal, updateBlockNumber } from './actions'
 import reducer, { ApplicationState } from './reducer'

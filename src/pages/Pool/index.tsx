@@ -1,6 +1,6 @@
 import React, { useContext, useMemo } from 'react'
 import { ThemeContext } from 'styled-components'
-import { Pair, ChainId } from '@trisolaris/sdk'
+import { Pair, ChainId } from '@pret/tri-sdk'
 import { Link } from 'react-router-dom'
 import { Text } from 'rebass'
 import { useTranslation } from 'react-i18next'

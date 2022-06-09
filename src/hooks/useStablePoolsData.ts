@@ -9,7 +9,7 @@ import {
   STABLESWAP_POOLS
 } from '../state/stableswap/constants'
 import { useStableSwapContract, useStableSwapMetaPool } from './useContract'
-import { ChainId, Fraction, JSBI, Percent, Price, Token, TokenAmount } from '@trisolaris/sdk'
+import { ChainId, Fraction, JSBI, Percent, Price, Token, TokenAmount } from '@pret/tri-sdk'
 import { useSingleCallResult, useSingleContractMultipleData } from '../state/multicall/hooks'
 import { useTokenBalance } from '../state/wallet/hooks'
 import { useTotalSupply } from '../data/TotalSupply'

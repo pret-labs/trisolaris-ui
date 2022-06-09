@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@trisolaris/sdk'
+import { ChainId, Token } from '@pret/tri-sdk'
 
 type Props = {
   lpAddress: string

@@ -5,7 +5,7 @@ import { RowBetween } from '../Row'
 import { AutoColumn } from '../Column'
 import Popover from '../Popover'
 import question from '../../assets/images/question.svg'
-import { Fraction, JSBI, TokenAmount } from '@trisolaris/sdk'
+import { Fraction, JSBI, TokenAmount } from '@pret/tri-sdk'
 import { addCommasToNumber } from '../../utils'
 
 const DataRow = styled(RowBetween)`

@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
-import { Currency } from '@trisolaris/sdk'
+import { Currency } from '@pret/tri-sdk'
 
 import CurrencyLogo from '../CurrencyLogo'
 import { RowBetween } from '../Row'

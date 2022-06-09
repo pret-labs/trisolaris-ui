@@ -1,4 +1,4 @@
-import { ChainId, JSBI, TokenAmount, Fraction, Token, Pair } from '@trisolaris/sdk'
+import { ChainId, JSBI, TokenAmount, Fraction, Token, Pair } from '@pret/tri-sdk'
 import { Interface } from '@ethersproject/abi'
 
 import { useComplexRewarderMultipleContracts, useMasterChefV2ContractForVersion } from './hooks-sushi'

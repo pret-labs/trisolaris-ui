@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from '@trisolaris/sdk'
+import { ChainId, JSBI, Pair, Route, Token, TokenAmount, Trade, TradeType } from '@pret/tri-sdk'
 import { computeTradePriceBreakdown } from './prices'
 
 describe('prices', () => {

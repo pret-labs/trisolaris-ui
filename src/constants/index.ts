@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Percent, Token, WETH as _WETH } from '@trisolaris/sdk'
+import { ChainId, JSBI, Percent, Token, WETH as _WETH } from '@pret/tri-sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 import { injected, walletlink, walletconnect } from '../connectors'
 import { DAI, TRI, USDT, WNEAR, ATLUNA, AURORA, POLAR, SPOLAR, LUNAR, STNEAR, XTRI, USDC, TRIPOLAR } from './tokens'

@@ -1,4 +1,4 @@
-import { CurrencyAmount } from '@trisolaris/sdk'
+import { CurrencyAmount } from '@pret/tri-sdk'
 import { BigNumber } from 'ethers'
 import { useCallback, useState } from 'react'
 import { isMetaPool, StableSwapPoolName, STABLESWAP_POOLS } from '../state/stableswap/constants'

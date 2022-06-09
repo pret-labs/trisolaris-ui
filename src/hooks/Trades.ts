@@ -1,4 +1,4 @@
-import { ChainId, Currency, CurrencyAmount, Pair, Token, TokenAmount, Trade } from '@trisolaris/sdk'
+import { ChainId, Currency, CurrencyAmount, Pair, Token, TokenAmount, Trade } from '@pret/tri-sdk'
 import flatMap from 'lodash.flatmap'
 import { useMemo } from 'react'
 
@@ -59,6 +59,8 @@ function useAllCommonPairs(currencyA?: Currency, currencyB?: Currency): Pair[] {
     [tokenA, tokenB, bases, basePairs, chainId]
   )
 
+  console.log('allPairCombinations', allPairCombinations);
+
   const allPairs = usePairs(allPairCombinations)
 
   // only pass along valid pairs, non-duplicated pairs
@@ -96,6 +98,9 @@ const getMaxHops = (tokenAddresses?: [string, string]) => {
  */
 export function useTradeExactIn(currencyAmountIn?: CurrencyAmount, currencyOut?: Currency): Trade | null {
   const allowedPairs = useAllCommonPairs(currencyAmountIn?.currency, currencyOut)
+
+  console.log('all allowed pairs', allowedPairs, currencyAmountIn, currencyOut);
+
   return useMemo(() => {
     if (currencyAmountIn && currencyOut && allowedPairs.length > 0) {
       return (

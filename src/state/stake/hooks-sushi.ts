@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount, JSBI } from '@trisolaris/sdk'
+import { ChainId, CurrencyAmount, JSBI } from '@pret/tri-sdk'
 import { useSingleCallResult } from '../../state/multicall/hooks'
 import { Dispatch, useEffect, useMemo, useState } from 'react'
 import { Contract } from '@ethersproject/contracts'

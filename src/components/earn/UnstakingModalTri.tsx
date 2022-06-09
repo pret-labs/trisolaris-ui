@@ -14,7 +14,7 @@ import { useActiveWeb3React } from '../../hooks'
 import { useTranslation } from 'react-i18next'
 import { StakingTri } from '../../state/stake/stake-constants'
 import { parseUnits } from '@ethersproject/units'
-import { CurrencyAmount } from '@trisolaris/sdk'
+import { CurrencyAmount } from '@pret/tri-sdk'
 
 const ContentWrapper = styled(AutoColumn)`
   width: 100%;

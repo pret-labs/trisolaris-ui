@@ -1,4 +1,4 @@
-import { ChainId, CurrencyAmount } from '@trisolaris/sdk'
+import { ChainId, CurrencyAmount } from '@pret/tri-sdk'
 
 import { useCallback } from 'react'
 import { useTransactionAdder } from '../transactions/hooks'

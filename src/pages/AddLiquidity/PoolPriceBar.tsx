@@ -1,4 +1,4 @@
-import { Currency, Percent, Price } from '@trisolaris/sdk'
+import { Currency, Percent, Price } from '@pret/tri-sdk'
 import React, { useContext } from 'react'
 import { Text } from 'rebass'
 import { ThemeContext } from 'styled-components'

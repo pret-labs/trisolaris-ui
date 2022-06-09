@@ -1,4 +1,4 @@
-import { JSBI, Token, TokenAmount } from '@trisolaris/sdk'
+import { JSBI, Token, TokenAmount } from '@pret/tri-sdk'
 import { BigNumber } from 'ethers'
 
 const TREASURY_VESTING_GENESIS = 1612899125

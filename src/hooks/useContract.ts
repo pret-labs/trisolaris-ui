@@ -1,5 +1,5 @@
 import { Contract } from '@ethersproject/contracts'
-import { ChainId, Token, WETH } from '@trisolaris/sdk'
+import { ChainId, Token, WETH } from '@pret/tri-sdk'
 // eslint-disable-next-line @typescript-eslint/camelcase
 import IUniswapV2Pair_ABI from '../constants/abis/polygon/IUniswapV2Pair.json'
 import { abi as STAKING_REWARDS_ABI } from '@pangolindex/governance/artifacts/contracts/StakingRewards.sol/StakingRewards.json'

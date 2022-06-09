@@ -1,6 +1,6 @@
 import { BigNumber } from '@ethersproject/bignumber'
 import { Contract } from '@ethersproject/contracts'
-import { SwapParameters } from '@trisolaris/sdk'
+import { SwapParameters } from '@pret/tri-sdk'
 import { useMemo } from 'react'
 import { INITIAL_ALLOWED_SLIPPAGE } from '../constants'
 import { useTransactionAdder } from '../state/transactions/hooks'

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Token } from '@trisolaris/sdk'
+import { Token } from '@pret/tri-sdk'
 import { Text } from 'rebass'
 import { Copy, Check } from 'lucide-react'
 

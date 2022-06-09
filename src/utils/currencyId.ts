@@ -1,4 +1,4 @@
-import { Currency, CETH, Token } from '@trisolaris/sdk'
+import { Currency, CETH, Token } from '@pret/tri-sdk'
 
 export function currencyId(currency: Currency): string {
   if (currency === CETH) return 'ETH'

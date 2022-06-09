@@ -7,7 +7,7 @@
  * RUN `yarn build-tokens` TO UPDATE THIS FILE
  **********************************************************************************************/
 
-import { ChainId, Token } from '@trisolaris/sdk'
+import { ChainId, Token } from '@pret/tri-sdk'
 
 export const DAI: { [chainId in ChainId]: Token } = {
   [ChainId.POLYGON]: new Token(ChainId.POLYGON, '0x8f3Cf7ad23Cd3CaDbD9735AFf958023239c6A063', 18, 'DAI', 'Dai Stablecoin'),

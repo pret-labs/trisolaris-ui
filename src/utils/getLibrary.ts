@@ -1,5 +1,5 @@
 import { Web3Provider } from '@ethersproject/providers'
-import { ChainId } from '@trisolaris/sdk'
+import { ChainId } from '@pret/tri-sdk'
 
 const DEFAULT_POLLING_INTERVAL = 15_000 // 15 seconds
 

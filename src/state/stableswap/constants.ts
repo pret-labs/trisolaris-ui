@@ -1,4 +1,4 @@
-import { ChainId, Token, WETH } from '@trisolaris/sdk'
+import { ChainId, Token, WETH } from '@pret/tri-sdk'
 import _ from 'lodash'
 import { FRAX, USDC, USDT, WBTC, UST, USN } from '../../constants/tokens'
 

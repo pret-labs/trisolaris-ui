@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { ChainId } from '@trisolaris/sdk'
+import { ChainId } from '@pret/tri-sdk'
 import { TRI } from '../../constants/tokens'
 import { ApplicationModal } from '../../state/application/actions'
 import { useModalOpen, useToggleTriPriceModal } from '../../state/application/hooks'

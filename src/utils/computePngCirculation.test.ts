@@ -1,4 +1,4 @@
-import { ChainId, JSBI, Token, TokenAmount } from '@trisolaris/sdk'
+import { ChainId, JSBI, Token, TokenAmount } from '@pret/tri-sdk'
 import { BigNumber } from 'ethers'
 import { ZERO_ADDRESS } from '../constants'
 import { computePngCirculation } from './computePngCirculation'

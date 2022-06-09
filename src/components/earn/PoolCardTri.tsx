@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Token, ChainId } from '@trisolaris/sdk'
+import { Token, ChainId } from '@pret/tri-sdk'
 import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
 import { Settings2 as ManageIcon } from 'lucide-react'

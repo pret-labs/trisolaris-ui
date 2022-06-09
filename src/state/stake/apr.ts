@@ -2,7 +2,7 @@ import { ChefVersions, STAKING, StakingTri } from './stake-constants'
 import { useMemo } from 'react'
 import { useFarmsAPI } from './useFarmsAPI'
 import { useActiveWeb3React } from '../../hooks'
-import { ChainId } from '@trisolaris/sdk'
+import { ChainId } from '@pret/tri-sdk'
 import { useFarmContractsForVersion } from './useFarmContractsForVersion'
 import { useFarmContractsForStableSwap } from './useFarmContractsForStableSwap'
 

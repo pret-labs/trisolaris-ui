@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { JSBI, Percent } from '@trisolaris/sdk'
+import { JSBI, Percent } from '@pret/tri-sdk'
 import { useTranslation } from 'react-i18next'
 import { Text } from 'rebass'
 

@@ -1,4 +1,4 @@
-import { Token, CETH } from '@trisolaris/sdk'
+import { Token, CETH } from '@pret/tri-sdk'
 import { TRI } from '../constants/tokens'
 import { unwrappedToken } from './wrappedCurrency'
 

@@ -1,4 +1,4 @@
-import { Pair } from '@trisolaris/sdk'
+import { Pair } from '@pret/tri-sdk'
 import { darken } from 'polished'
 import React, { useState, useContext } from 'react'
 import { Text } from 'rebass'

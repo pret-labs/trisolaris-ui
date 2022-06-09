@@ -1,4 +1,4 @@
-import { Currency, CurrencyAmount, JSBI, TokenAmount } from '@trisolaris/sdk'
+import { Currency, CurrencyAmount, JSBI, TokenAmount } from '@pret/tri-sdk'
 import { useCallback, useMemo, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useTotalSupply } from '../../data/TotalSupply'

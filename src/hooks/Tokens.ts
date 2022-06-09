@@ -1,5 +1,5 @@
 import { parseBytes32String } from '@ethersproject/strings'
-import { Currency, CETH, Token, currencyEquals } from '@trisolaris/sdk'
+import { Currency, CETH, Token, currencyEquals } from '@pret/tri-sdk'
 import _ from 'lodash'
 import { useMemo } from 'react'
 import { useSelectedTokenList } from '../state/lists/hooks'

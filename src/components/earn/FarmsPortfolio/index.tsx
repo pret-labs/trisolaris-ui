@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { ChainId } from '@trisolaris/sdk'
+import { ChainId } from '@pret/tri-sdk'
 
 import CurrencyLogo from '../../CurrencyLogo'
 

@@ -1,4 +1,4 @@
-import { CurrencyAmount, JSBI } from '@trisolaris/sdk'
+import { CurrencyAmount, JSBI } from '@pret/tri-sdk'
 import { useState, useCallback } from 'react'
 import { BIG_INT_ZERO } from '../constants'
 import { isMetaPool, StableSwapPoolName, STABLESWAP_POOLS } from '../state/stableswap/constants'

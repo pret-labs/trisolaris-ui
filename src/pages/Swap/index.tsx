@@ -1,7 +1,7 @@
 import React, { useCallback, useContext, useEffect, useMemo, useState } from 'react'
 import ReactGA from 'react-ga'
 import { ThemeContext } from 'styled-components'
-import { JSBI, Percent, Token, Trade } from '@trisolaris/sdk'
+import { JSBI, Percent, Token, Trade } from '@pret/tri-sdk'
 import { ChevronDown } from 'react-feather'
 import { Text } from 'rebass'
 import { useTranslation } from 'react-i18next'
@@ -122,6 +122,8 @@ export default function Swap() {
   }
   const trade = showWrap ? undefined : tradesByVersion[toggledVersion]
   const defaultTrade = showWrap ? undefined : tradesByVersion[DEFAULT_VERSION]
+
+  console.log('trade', trade, defaultTrade);
 
   const betterTradeLinkVersion: Version | undefined = undefined
 

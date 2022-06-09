@@ -5,7 +5,7 @@ import { JsonRpcSigner, Web3Provider } from '@ethersproject/providers'
 import { BigNumber } from '@ethersproject/bignumber'
 import IUniswapV2Router02_ABI from '../constants/abis/polygon/IUniswapV2Router02.json'
 import { ETHERSCAN_PREFIXES } from '../constants/index'
-import { ChainId, JSBI, Percent, Token, CurrencyAmount, Currency, CETH, ROUTER_ADDRESS } from '@trisolaris/sdk'
+import { ChainId, JSBI, Percent, Token, CurrencyAmount, Currency, CETH, ROUTER_ADDRESS } from '@pret/tri-sdk'
 import { TokenAddressMap } from '../state/lists/hooks'
 import { getNetworkLibrary } from '../connectors'
 

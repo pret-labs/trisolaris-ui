@@ -1,4 +1,4 @@
-import { TokenAmount, Pair, Currency, ChainId } from '@trisolaris/sdk'
+import { TokenAmount, Pair, Currency, ChainId } from '@pret/tri-sdk'
 import { useMemo } from 'react'
 import IUniswapV2Pair_ABI from '../constants/abis/polygon/IUniswapV2Pair.json'
 import { Interface } from '@ethersproject/abi'

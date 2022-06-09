@@ -1,4 +1,4 @@
-import { ChainId, Fraction, JSBI } from '@trisolaris/sdk'
+import { ChainId, Fraction, JSBI } from '@pret/tri-sdk'
 import { TRI, USDC } from '../constants/tokens'
 import { useCallback, useMemo } from 'react'
 import IUniswapV2Pair_ABI from '../constants/abis/polygon/IUniswapV2Pair.json'

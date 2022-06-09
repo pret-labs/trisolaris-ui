@@ -1,5 +1,5 @@
 import React from 'react'
-import { Percent, Price } from '@trisolaris/sdk'
+import { Percent, Price } from '@pret/tri-sdk'
 import { useTranslation } from 'react-i18next'
 import { LightCard } from '../../components/Card'
 import Row from '../../components/Row'

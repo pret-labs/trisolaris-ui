@@ -1,4 +1,4 @@
-import { CurrencyAmount, ETHER, Percent, Route, TokenAmount, Trade } from '@trisolaris/sdk'
+import { CurrencyAmount, ETHER, Percent, Route, TokenAmount, Trade } from '@pret/tri-sdk'
 import { DAI, USDC } from '../constants/tokens'
 import { MockV1Pair } from '../data/V1'
 import v1SwapArguments from './v1SwapArguments'

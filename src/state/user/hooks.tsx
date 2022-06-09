@@ -1,4 +1,4 @@
-import { ChainId, Pair, Token } from '@trisolaris/sdk'
+import { ChainId, Pair, Token } from '@pret/tri-sdk'
 import { useCallback, useMemo } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 

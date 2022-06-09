@@ -1,4 +1,4 @@
-import { CurrencyAmount, TokenAmount } from '@trisolaris/sdk'
+import { CurrencyAmount, TokenAmount } from '@pret/tri-sdk'
 import { maxAmountSpend } from '../../utils/maxAmountSpend'
 import { divideCurrencyAmountByNumber } from '../../utils'
 import BalanceButtonValueEnum from '../BalanceButton/BalanceButtonValueEnum'

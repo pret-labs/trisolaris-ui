@@ -1,4 +1,4 @@
-import { ChainId, JSBI, TokenAmount } from '@trisolaris/sdk'
+import { ChainId, JSBI, TokenAmount } from '@pret/tri-sdk'
 import { TRI } from '../../constants/tokens'
 import { useComplexRewarderContract, useMasterChefV2ContractForVersion } from './hooks-sushi'
 import { STAKING, StakingTri, tokenAmount, ChefVersions } from './stake-constants'

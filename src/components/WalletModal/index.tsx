@@ -19,7 +19,7 @@ import Modal from '../Modal'
 import Option from './Option'
 import PendingView from './PendingView'
 import { useTranslation } from 'react-i18next'
-import { ChainId } from '@trisolaris/sdk'
+import { ChainId } from '@pret/tri-sdk'
 
 const WALLET_TUTORIAL = 'https://metamask.io/faqs'
 

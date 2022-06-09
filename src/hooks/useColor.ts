@@ -2,7 +2,7 @@ import { useState, useLayoutEffect } from 'react'
 import { shade } from 'polished'
 import Vibrant from 'node-vibrant'
 import { hex } from 'wcag-contrast'
-import { Token } from '@trisolaris/sdk'
+import { Token } from '@pret/tri-sdk'
 
 const COLOR_MAP = new Map()
 

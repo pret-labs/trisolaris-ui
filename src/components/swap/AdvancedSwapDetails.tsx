@@ -1,4 +1,4 @@
-import { Percent, Trade, TradeType } from '@trisolaris/sdk'
+import { Percent, Trade, TradeType } from '@pret/tri-sdk'
 import React, { useContext } from 'react'
 import { ThemeContext } from 'styled-components'
 import { Field } from '../../state/swap/actions'

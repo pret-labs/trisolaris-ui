@@ -1,5 +1,5 @@
 import React from 'react'
-import { Currency } from '@trisolaris/sdk'
+import { Currency } from '@pret/tri-sdk'
 
 import { Input as NumericalInput } from '../../components/NumericalInput'
 import { useTranslation } from 'react-i18next'

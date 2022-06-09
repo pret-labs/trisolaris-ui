@@ -1,5 +1,5 @@
 import React from 'react'
-import { Token, ChainId } from '@trisolaris/sdk'
+import { Token, ChainId } from '@pret/tri-sdk'
 
 import { getTokenList } from './GetTokenLink.constants'
 

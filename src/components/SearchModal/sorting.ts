@@ -1,4 +1,4 @@
-import { Token, TokenAmount } from '@trisolaris/sdk'
+import { Token, TokenAmount } from '@pret/tri-sdk'
 import { useMemo } from 'react'
 import { useAllTokenBalances } from '../../state/wallet/hooks'
 

@@ -1,4 +1,4 @@
-import { ChainId } from '@trisolaris/sdk'
+import { ChainId } from '@pret/tri-sdk'
 import React, { useState, useCallback } from 'react'
 import styled from 'styled-components'
 import { DarkGreyCard } from '../../components/Card'
