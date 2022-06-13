@@ -3747,10 +3747,10 @@
     penpal "3.0.7"
     pocket-js-core "0.0.3"
 
-"@pret/tri-sdk@1.6.1":
-  version "1.6.1"
-  resolved "https://registry.yarnpkg.com/@pret/tri-sdk/-/tri-sdk-1.6.1.tgz#297f8e4d4e6c700dd27a1cb9f0ce018c8106d521"
-  integrity sha512-tZdXJVKu+An57rmcqk6c7ZDXQiskvS3u7CzlAcRc8OPHv76ALSw56q4w8Aq4HWtSX69QMvmR3LBTgyPdQZteog==
+"@pret/tri-sdk@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@pret/tri-sdk/-/tri-sdk-1.6.2.tgz#e0e111518de1b3f1ebb54a5844c10ac37258d982"
+  integrity sha512-UQGbn9HkRMd6K6KxFl3byMufYUkxONkikINpb+Me65ALNehHU8waeh/n4v+EyyzPqkaVmzOGzKuFMKNGEbm4xg==
   dependencies:
     "@openzeppelin/cli" "^2.8.2"
     big.js "^5.2.2"

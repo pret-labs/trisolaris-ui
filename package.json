@@ -17,7 +17,7 @@
     "@reach/dialog": "^0.10.3",
     "@reach/portal": "^0.10.3",
     "@reduxjs/toolkit": "^1.3.5",
-    "@pret/tri-sdk": "1.6.1",
+    "@pret/tri-sdk": "1.6.2",
     "@types/jest": "^27.4.0",
     "@types/lodash.flatmap": "^4.5.6",
     "@types/luxon": "^1.24.4",
